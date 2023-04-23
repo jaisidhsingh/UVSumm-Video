@@ -8,7 +8,7 @@ from models.scoring_transformer import ScoringTransformer
 from data import *
 
 from utils.schedulers import *
-from utils.misc import *
+from utils.training import *
 
 import torch
 import torch.nn as nn
@@ -26,19 +26,34 @@ warnings.simplefilter('ignore')
 
 # setup command line arguments
 def make_args():
-	parser = argparse.ArgumentParser()
-	parser.add_argument(
-		"--dataset-name",
-		type=str,
-		default="tvsumm"
-	)
-	parser.add_argument(
-		"--device",
-		type=str,
-		default=global_config.device
-	)
-	args = parser.parse_args()
-	return args
+        parser = argparse.ArgumentParser()
+        parser.add_argument(
+                "--dataset-name",
+                type=str,
+                default="tvsumm"
+        )
+        parser.add_argument(
+                "--device",
+                type=str,
+                default=global_config.device
+        )
+        parser.add_argument(
+                "--epochs",
+                type=int,
+                default=training_config.epochs
+        )
+        parser.add_argument(
+                "--batch-size",
+                type=int,
+                default=training_config.batch_size
+        )
+        parser.add_argument(
+                "--learning-rate",
+                type=float,
+                default=training_config.learning_rate
+        )
+        args = parser.parse_args()
+        return args
 
 def train(args):
 	# initialize unique run-id to this run
@@ -54,7 +69,7 @@ def train(args):
 	)
 	train_loader = DataLoader(
 		train_dataset, 
-		batch_size=training_config.batch_size, 
+		batch_size=args.batch_size, 
 		shuffle=True,
 	)
 
@@ -64,7 +79,7 @@ def train(args):
 	)
 	test_loader = DataLoader(
 		test_dataset, 
-		batch_size=training_config.batch_size, 
+		batch_size=args.batch_size, 
 		shuffle=True,
 	)
 	
@@ -73,7 +88,7 @@ def train(args):
 	scoring_model.to(args.device)
 
 	criterion = nn.BCELoss()
-	optimizer = optim.AdamW(scoring_model.parameters(), lr=training_config.learning_rate)
+	optimizer = optim.AdamW(scoring_model.parameters(), lr=args.learning_rate)
 	scheduler = WarmupCosineSchedule(optimizer, warmup_steps=20, t_total=40)
 
 	stats = {
@@ -84,7 +99,7 @@ def train(args):
 		'train_loss': []
 	}
 	# start training loop
-	for epoch in range(training_config.epochs):
+	for epoch in range(args.epochs):
 		train_loss = train_scoring_model(
 			args, epoch,
 			training_config, global_config,
