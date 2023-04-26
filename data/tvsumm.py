@@ -40,7 +40,7 @@ class TvSummDataset(Dataset):
 		video_name = self.video_names[idx]
 		features = self.video_features[idx]
 		labels = torch.tensor(self.labels[idx])
-		length = int(self.lengths[idx])
+		length = self.lengths[idx]
 		change_points = self.change_points[idx]
 		nfps = self.n_frame_per_seg[idx]
 		picks = self.picks[idx]

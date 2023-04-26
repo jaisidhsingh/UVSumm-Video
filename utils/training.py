@@ -33,7 +33,6 @@ def train_scoring_model(
 		scheduler.step()
 		batch_counter += 1
 
-
 	if (epoch + 1) % training_config.save_point == 0:
 		ckpt_save_path = os.path.join(
 			global_config.ckpt_dir, f"{args.dataset_name}_scoring_model_epoch_{epoch+1}.pt"

@@ -20,19 +20,19 @@ def eval_metrics(y_pred, y_true):
 
 
 def select_keyshots(video_info, pred_score):
-	N = int(video_info['length'])
-	cps = video_info['change_points'][0]
-	weight = video_info['nfps'][0]
-	pred_score = np.array(pred_score.cpu().data)
-	pred_score = upsample(pred_score, N)
+    N = video_info['length']
+    cps = video_info['change_points'][0]
+    weight = video_info['nfps'][0]
+    pred_score = np.array(pred_score.cpu().data)
+    pred_score = upsample(pred_score, N)
 
-	pred_value = np.array([pred_score[cp[0]:cp[1]].mean() for cp in cps])
-	_, selected = knapsack(pred_value, weight, int(0.15 * N))
-	selected = selected[::-1]
-	key_labels = np.zeros(shape=(N, ))
-	for i in selected:
-		key_labels[cps[i][0]:cps[i][1]] = 1
-	return pred_score.tolist(), selected, key_labels.tolist()
+    pred_value = np.array([pred_score[cp[0]:cp[1]].mean() for cp in cps])
+    _, selected = knapsack(pred_value, weight, int(0.15 * N))
+    selected = selected[::-1]
+    key_labels = np.zeros(shape=(N, ))
+    for i in selected:
+        key_labels[cps[i][0]:cps[i][1]] = 1
+    return pred_score.tolist(), selected, key_labels.tolist()
 
 
 def upsample(down_arr, N):

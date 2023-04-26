@@ -30,4 +30,12 @@ for key2 in temp2.keys():
 # print(temp3)
 print(len(temp3))
 # torch.save(temp3, "../datasets/tvsumm/helpers/rename_helper.pt")
+
+import sys
+import os
+cwd = os.getcwd()
+module2add = '\\'.join(cwd.split("\\")[:-1])
+sys.path.append(module2add)
+
+from configs.global_configs import cfg as global_config
 """

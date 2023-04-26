@@ -20,56 +20,43 @@ import argparse
 import random
 import string
 import json
+import sys
 import warnings
 warnings.simplefilter('ignore')
 
 
 # setup command line arguments
 def make_args():
-        parser = argparse.ArgumentParser()
-        parser.add_argument(
-                "--dataset-name",
-                type=str,
-                default="tvsumm"
-        )
-        parser.add_argument(
-                "--device",
-                type=str,
-                default=global_config.device
-        )
-        parser.add_argument(
-                "--epochs",
-                type=int,
-                default=training_config.epochs
-        )
-        parser.add_argument(
-                "--batch-size",
-                type=int,
-                default=training_config.batch_size
-        )
-        parser.add_argument(
-                "--learning-rate",
-                type=float,
-                default=training_config.learning_rate
-        )
-        args = parser.parse_args()
-        return args
+	parser = argparse.ArgumentParser()
+	parser.add_argument(
+		"--dataset-name",
+		type=str,
+		default="tvsumm"
+	)
+	parser.add_argument(
+		"--device",
+		type=str,
+		default=global_config.device
+	)
+	args = parser.parse_args()
+	return args
 
 def train(args):
+
 	# initialize unique run-id to this run
 	run_id = ''.join(random.choices(string.ascii_letters, k=7))
 	with open(global_config.runs_tracker) as f:
 		runs_data = json.load(f)
 	my_run_data = {'run_id': run_id}
 	
-	# load in the dataset to train
+	# load in the datasets to train and test on
 	train_dataset = VideoSummarizationDatasets[args.dataset_name](
 		dataset_file=data_config.loading[args.dataset_name]['data_file'], 
 		split='train'
 	)
 	train_loader = DataLoader(
 		train_dataset, 
-		batch_size=args.batch_size, 
+		batch_size=training_config.batch_size, 
 		shuffle=True,
 	)
 
@@ -79,7 +66,7 @@ def train(args):
 	)
 	test_loader = DataLoader(
 		test_dataset, 
-		batch_size=args.batch_size, 
+		batch_size=training_config.batch_size, 
 		shuffle=True,
 	)
 	
@@ -88,7 +75,7 @@ def train(args):
 	scoring_model.to(args.device)
 
 	criterion = nn.BCELoss()
-	optimizer = optim.AdamW(scoring_model.parameters(), lr=args.learning_rate)
+	optimizer = optim.AdamW(scoring_model.parameters(), lr=training_config.learning_rate)
 	scheduler = WarmupCosineSchedule(optimizer, warmup_steps=20, t_total=40)
 
 	stats = {
@@ -99,7 +86,7 @@ def train(args):
 		'train_loss': []
 	}
 	# start training loop
-	for epoch in range(args.epochs):
+	for epoch in range(training_config.epochs):
 		train_loss = train_scoring_model(
 			args, epoch,
 			training_config, global_config,
@@ -141,8 +128,16 @@ def train(args):
 	model_save_path = os.path.join(global_config.ckpt_dir, model_save_path)
 	torch.save(scoring_model.state_dict(), model_save_path)
 
+	best_f1_score = max(stats['f1_score'])
+	best_precision = max(stats['precision'])
+	best_recall = max(stats['recall'])	
+
 	my_run_data['run_stats_save_path'] = run_stats_save_path
 	my_run_data['run_model_save_path'] = model_save_path
+	my_run_data['best_f1_score'] = best_f1_score
+	my_run_data['best_precision'] = best_precision
+	my_run_data['best_recall'] = best_recall
+
 
 	runs_data.append(my_run_data)
 	with open(global_config.runs_tracker, "w") as f:
