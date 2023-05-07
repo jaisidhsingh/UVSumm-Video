@@ -1,5 +1,6 @@
 from torchvision import transforms, models
 import torch
+from torch import nn
 from PIL import Image
 from pathlib import Path
 import cv2
@@ -9,11 +10,6 @@ from tqdm import tqdm
 import argparse
 import pdb
 import warnings
-import sys
-import os
-cwd = os.getcwd()
-module2add = '\\'.join(cwd.split("\\")[:-1])
-sys.path.append(module2add)
 from models.feature_extractor import FeatureExtractor
 from time import perf_counter
 warnings.simplefilter("ignore")
@@ -147,8 +143,7 @@ def video2fea(video_path, h5_f, model, helper):
     fea = torch.stack(fea)
     fea = fea[:320]
     label = label[:320]
-    # v_data = h5_f.create_group('video_'+idx)
-    v_data = {}
+    v_data = h5_f.create_group('video_'+idx)
     v_data['feature'] = fea.numpy()
     v_data['label'] = label
     v_data['length'] = len(usr_sum)
@@ -156,8 +151,6 @@ def video2fea(video_path, h5_f, model, helper):
     v_data['n_frame_per_seg'] = n_frame_per_seg
     v_data['picks'] = [ratio*i for i in range(320)]
     v_data['user_summary'] = usr_sum_arr
-
-    h5_f['video_'+idx] = v_data
     if fea.shape[0] != 320 or len(label) != 320:
         print('error in video ', idx, fea.shape[0], len(label))
 
@@ -167,15 +160,13 @@ def make_dataset(video_dir, h5_path):
     video_dir = Path(video_dir).resolve()
     video_list = list(video_dir.glob('*.mp4'))
     video_list.sort()
-
-    h5_f = {}
-    for video_path in tqdm(video_list, desc='Video', ncols=80, leave=False):
-        start_time = perf_counter()
-        video2fea(video_path, h5_f, fea_net, rename_helper)
+    with h5py.File(h5_path, 'w') as h5_f:
+        for video_path in tqdm(video_list, desc='Video', ncols=80, leave=False):
+            start_time = perf_counter()
+            video2fea(video_path, h5_f, fea_net, rename_helper)
     
     print(" ")
     print("  ")
-    torch.save(h5_f, "../datasets/tvsumm/test_preprocessing.pt")
     end_time = perf_counter()
     print("Took time:", end_time - start_time)
     

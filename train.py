@@ -31,12 +31,28 @@ def make_args():
 	parser.add_argument(
 		"--dataset-name",
 		type=str,
-		default="tvsumm"
+		default="tvsumm",
+		choices=['tvsumm', 'summe']
 	)
 	parser.add_argument(
 		"--device",
 		type=str,
 		default=global_config.device
+	)
+	parser.add_argument(
+		"--epochs",
+		type=str,
+		default=training_config.epochs
+	)
+	parser.add_argument(
+		"--learning-rate",
+		type=str,
+		default=training_config.learning_rate
+	)
+	parser.add_argument(
+		"--batch-size",
+		type=str,
+		default=training_config.batch_size
 	)
 	args = parser.parse_args()
 	return args
@@ -56,7 +72,7 @@ def train(args):
 	)
 	train_loader = DataLoader(
 		train_dataset, 
-		batch_size=training_config.batch_size, 
+		batch_size=args.batch_size, 
 		shuffle=True,
 	)
 
@@ -66,7 +82,7 @@ def train(args):
 	)
 	test_loader = DataLoader(
 		test_dataset, 
-		batch_size=training_config.batch_size, 
+		batch_size=args.batch_size, 
 		shuffle=True,
 	)
 	
@@ -74,9 +90,14 @@ def train(args):
 	scoring_model = ScoringTransformer(model_config.trans_cfg)
 	scoring_model.to(args.device)
 
-	criterion = nn.BCELoss()
-	optimizer = optim.AdamW(scoring_model.parameters(), lr=training_config.learning_rate)
-	scheduler = WarmupCosineSchedule(optimizer, warmup_steps=20, t_total=40)
+	criterion_cls = nn.BCELoss()
+	criterion_recon = nn.MSELoss()
+	optimizer = optim.AdamW(
+		scoring_model.parameters(), 
+		lr=args.learning_rate,
+		weight_decay=1e-3
+	)
+	scheduler = WarmupCosineSchedule(optimizer, warmup_steps=10, t_total=40)
 
 	stats = {
 		'precision': [],
@@ -85,23 +106,27 @@ def train(args):
 		'test_loss': [],
 		'train_loss': []
 	}
+	eval_dump = []
 	# start training loop
-	for epoch in range(training_config.epochs):
+	for epoch in range(args.epochs):
 		train_loss = train_scoring_model(
 			args, epoch,
 			training_config, global_config,
 			scoring_model, 
 			train_loader, 
 			optimizer, 
-			criterion, 
+			criterion_cls,
+			criterion_recon, 
 			scheduler
 		)
 		eval_results, test_loss = evaluate(
 			args,
 			scoring_model, 
 			test_loader, 
-			criterion, 
+			criterion_cls,
+			criterion_recon 
 		)	
+		eval_dump.append(eval_results)
 
 		test_precision = round(eval_results['evaluation_results'][0], 4)
 		test_recall = round(eval_results['evaluation_results'][1], 4)
@@ -119,6 +144,10 @@ def train(args):
 		stats['f1_score'].append(test_f1_score)
 		stats['test_loss'].append(test_loss)
 		stats['train_loss'].append(train_loss)
+
+	eval_save_path = f"eval_results_id_{run_id}.pt"
+	eval_save_path = os.path.join(global_config.ckpt_dir, eval_save_path)
+	torch.save(eval_dump, eval_save_path)
 
 	run_stats_save_path = f"stats_id_{run_id}.pt"
 	run_stats_save_path = os.path.join(global_config.runs_stats_save_dir, run_stats_save_path)

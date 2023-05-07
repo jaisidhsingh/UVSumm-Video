@@ -1,5 +1,6 @@
 from torchvision import transforms, models
 import torch
+from torch import nn
 from PIL import Image
 from pathlib import Path
 import cv2
@@ -9,21 +10,17 @@ from tqdm import tqdm
 import argparse
 import pdb
 import warnings
+from models.feature_extractor import FeatureExtractor
 from time import perf_counter
 import scipy.io
-import sys
 import os
-cwd = os.getcwd()
-module2add = '\\'.join(cwd.split("\\")[:-1])
-sys.path.append(module2add)
-from models.feature_extractor import FeatureExtractor
 warnings.simplefilter("ignore")
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '--video_dir', 
-    default='../datasets/summe/videos',
+    default='../datasets/summe/new_videos',
     type=str, 
     help='directory containing mp4 file of specified dataset.'
 )
@@ -120,7 +117,7 @@ def get_oracle_summary(user_summary):
 
 def make_helpers():
     temp1 = {}
-    p = "../datasets/summe/GT/"
+    p = "../datasets/summe/new_GT/"
     for f in os.listdir(p):
         d = scipy.io.loadmat(os.path.join(p, f))
         temp1[f] = int(d['nFrames'])
@@ -140,15 +137,20 @@ def make_helpers():
 
 def video2fea(video_path, h5_f, model, helper):
     video = cv2.VideoCapture(video_path.as_uri())
+    
+    
     idx = video_path.as_uri().split('.')[0]
     idx = idx.split('/')[-1]
 
-    # tqdm.write('Processing video '+idx)
+    #tqdm.write('Processing video '+idx)
     
     length = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
     ratio = length//320
     fea = []
     label = []
+
+    idx = idx.replace("%20", " ")
+
     name = helper[idx]
     usr_sum_arr = vsumm_data[name]['user_summary'][()]
     usr_sum = get_oracle_summary(usr_sum_arr) 
@@ -210,7 +212,7 @@ def make_dataset(video_dir):
     print("Took time:", end_time - start_time)
     
 if __name__ == '__main__':
+    make_helpers()
     make_dataset(video_dir) 
-    # make_helpers()
 
     vsumm_data.close()

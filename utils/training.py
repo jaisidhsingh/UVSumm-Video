@@ -1,3 +1,8 @@
+from configs.training_configs import cfg as training_config
+from configs.global_configs import cfg as global_config
+from configs.data_configs import cfg as data_config
+from configs.model_configs import cfg as model_config
+
 import torch
 import os
 from tqdm import tqdm
@@ -12,7 +17,8 @@ def train_scoring_model(
 		scoring_model, 
 		train_loader, 
 		optimizer, 
-		criterion, 
+		criterion_cls,
+		criterion_recon, 
 		scheduler):
 	scoring_model.train()
 	running_loss = 0
@@ -24,8 +30,11 @@ def train_scoring_model(
 		# zero out the gradients accumulated
 		optimizer.zero_grad()
 		# forward pass
-		scores = scoring_model(features)
-		loss = criterion(scores, labels)
+		scores, output_features = scoring_model(features)
+		loss_cls = training_config.cls_weight*criterion_cls(scores, labels) 
+		loss_recon = training_config.recon_weight*criterion_recon(output_features, features)
+
+		loss = loss_cls + loss_recon
 		running_loss += loss.item()
 		# backward pass
 		loss.backward()
@@ -46,7 +55,7 @@ def train_scoring_model(
 
 	return running_loss
 
-def evaluate(args, scoring_model, test_loader, criterion):
+def evaluate(args, scoring_model, test_loader, criterion_cls, criterion_recon):
 	scoring_model.eval()
 	eval_arr = []
 	data2return = {}
@@ -58,8 +67,10 @@ def evaluate(args, scoring_model, test_loader, criterion):
 		labels = data['labels'].float().to(args.device)
 
 		with torch.no_grad():
-			scores = scoring_model(features)
-			loss = criterion(scores, labels)
+			scores, output_features = scoring_model(features)
+			loss_cls = training_config.cls_weight*criterion_cls(scores, labels)
+			loss_recon = training_config.recon_weight*criterion_recon(output_features, features)
+			loss = loss_cls + loss_recon
 			running_loss += loss.item()
 		
 		pred_score = torch.softmax(scores, dim=1) # softmax across frames

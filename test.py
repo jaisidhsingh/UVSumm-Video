@@ -46,5 +46,3 @@ def test2():
 	model.cuda()
 	y = model(x)
 	print(y.shape)
-
-test2()

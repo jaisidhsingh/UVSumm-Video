@@ -1,0 +1,1053 @@
+Epoch: 1, Training Loss: 9.3835908472538
+---------- Test Loss: 2.089335948228836
+---------- Test Precision: 0.1736
+---------- Test Recall: 0.1903
+---------- Test F1 Score: 0.1792
+ 
+ 
+Epoch: 2, Training Loss: 8.047138065099716
+---------- Test Loss: 1.9888138175010681
+---------- Test Precision: 0.1814
+---------- Test Recall: 0.1987
+---------- Test F1 Score: 0.1872
+ 
+ 
+Epoch: 3, Training Loss: 7.868948131799698
+---------- Test Loss: 1.9654307067394257
+---------- Test Precision: 0.1922
+---------- Test Recall: 0.2132
+---------- Test F1 Score: 0.1991
+ 
+ 
+Epoch: 4, Training Loss: 7.728441625833511
+---------- Test Loss: 1.8840270042419434
+---------- Test Precision: 0.1811
+---------- Test Recall: 0.1987
+---------- Test F1 Score: 0.187
+ 
+ 
+Epoch: 5, Training Loss: 7.401385486125946
+---------- Test Loss: 1.8645519316196442
+---------- Test Precision: 0.1905
+---------- Test Recall: 0.2116
+---------- Test F1 Score: 0.1975
+ 
+ 
+Epoch: 6, Training Loss: 7.351457208395004
+---------- Test Loss: 1.8324749171733856
+---------- Test Precision: 0.1907
+---------- Test Recall: 0.2117
+---------- Test F1 Score: 0.1976
+ 
+ 
+Epoch: 7, Training Loss: 7.338921666145325
+---------- Test Loss: 1.8235162496566772
+---------- Test Precision: 0.1907
+---------- Test Recall: 0.2117
+---------- Test F1 Score: 0.1976
+ 
+ 
+Epoch: 8, Training Loss: 7.149010986089706
+---------- Test Loss: 1.790467619895935
+---------- Test Precision: 0.1943
+---------- Test Recall: 0.2158
+---------- Test F1 Score: 0.2015
+ 
+ 
+Epoch: 9, Training Loss: 7.097844183444977
+---------- Test Loss: 1.7705902457237244
+---------- Test Precision: 0.2015
+---------- Test Recall: 0.2199
+---------- Test F1 Score: 0.2076
+ 
+ 
+Epoch: 10, Training Loss: 7.06594642996788
+---------- Test Loss: 1.7253571152687073
+---------- Test Precision: 0.2283
+---------- Test Recall: 0.2493
+---------- Test F1 Score: 0.2353
+ 
+ 
+Epoch: 11, Training Loss: 6.935339033603668
+---------- Test Loss: 1.7106091678142548
+---------- Test Precision: 0.2305
+---------- Test Recall: 0.2523
+---------- Test F1 Score: 0.2379
+ 
+ 
+Epoch: 12, Training Loss: 6.828610569238663
+---------- Test Loss: 1.7053715288639069
+---------- Test Precision: 0.2305
+---------- Test Recall: 0.2523
+---------- Test F1 Score: 0.2379
+ 
+ 
+Epoch: 13, Training Loss: 6.8975077867507935
+---------- Test Loss: 1.6638614535331726
+---------- Test Precision: 0.2479
+---------- Test Recall: 0.2733
+---------- Test F1 Score: 0.2564
+ 
+ 
+Epoch: 14, Training Loss: 6.6840274930000305
+---------- Test Loss: 1.661134123802185
+---------- Test Precision: 0.2365
+---------- Test Recall: 0.2576
+---------- Test F1 Score: 0.2436
+ 
+ 
+Epoch: 15, Training Loss: 6.520585238933563
+---------- Test Loss: 1.6339662969112396
+---------- Test Precision: 0.2365
+---------- Test Recall: 0.2576
+---------- Test F1 Score: 0.2436
+ 
+ 
+Epoch: 16, Training Loss: 6.468482136726379
+---------- Test Loss: 1.5987206995487213
+---------- Test Precision: 0.2479
+---------- Test Recall: 0.2733
+---------- Test F1 Score: 0.2564
+ 
+ 
+Epoch: 17, Training Loss: 6.423376888036728
+---------- Test Loss: 1.5535890460014343
+---------- Test Precision: 0.2367
+---------- Test Recall: 0.2583
+---------- Test F1 Score: 0.244
+ 
+ 
+Epoch: 18, Training Loss: 6.108276337385178
+---------- Test Loss: 1.538631945848465
+---------- Test Precision: 0.2441
+---------- Test Recall: 0.2656
+---------- Test F1 Score: 0.2514
+ 
+ 
+Epoch: 19, Training Loss: 6.134195953607559
+---------- Test Loss: 1.5917693674564362
+---------- Test Precision: 0.2668
+---------- Test Recall: 0.2877
+---------- Test F1 Score: 0.2738
+ 
+ 
+Epoch: 20, Training Loss: 6.182287365198135
+---------- Test Loss: 1.4927955865859985
+---------- Test Precision: 0.2332
+---------- Test Recall: 0.2548
+---------- Test F1 Score: 0.2405
+ 
+ 
+Epoch: 21, Training Loss: 5.744404032826424
+---------- Test Loss: 1.4222340881824493
+---------- Test Precision: 0.2332
+---------- Test Recall: 0.2548
+---------- Test F1 Score: 0.2405
+ 
+ 
+Epoch: 22, Training Loss: 5.833432257175446
+---------- Test Loss: 1.5851786434650421
+---------- Test Precision: 0.2559
+---------- Test Recall: 0.2769
+---------- Test F1 Score: 0.2629
+ 
+ 
+Epoch: 23, Training Loss: 5.901116117835045
+---------- Test Loss: 1.4460643231868744
+---------- Test Precision: 0.2668
+---------- Test Recall: 0.2877
+---------- Test F1 Score: 0.2738
+ 
+ 
+Epoch: 24, Training Loss: 5.7856868505477905
+---------- Test Loss: 1.4347569048404694
+---------- Test Precision: 0.2597
+---------- Test Recall: 0.2846
+---------- Test F1 Score: 0.2679
+ 
+ 
+Epoch: 25, Training Loss: 5.7192783653736115
+---------- Test Loss: 1.3533270061016083
+---------- Test Precision: 0.2653
+---------- Test Recall: 0.2857
+---------- Test F1 Score: 0.2721
+ 
+ 
+Epoch: 26, Training Loss: 5.248323529958725
+---------- Test Loss: 1.3154556602239609
+---------- Test Precision: 0.2559
+---------- Test Recall: 0.2769
+---------- Test F1 Score: 0.2629
+ 
+ 
+Epoch: 27, Training Loss: 5.1301459223032
+---------- Test Loss: 1.2958998829126358
+---------- Test Precision: 0.2668
+---------- Test Recall: 0.2877
+---------- Test F1 Score: 0.2738
+ 
+ 
+Epoch: 28, Training Loss: 5.086677357554436
+---------- Test Loss: 1.2444741129875183
+---------- Test Precision: 0.2852
+---------- Test Recall: 0.3144
+---------- Test F1 Score: 0.2952
+ 
+ 
+Epoch: 29, Training Loss: 5.1800606995821
+---------- Test Loss: 1.229409635066986
+---------- Test Precision: 0.2879
+---------- Test Recall: 0.3146
+---------- Test F1 Score: 0.2968
+ 
+ 
+Epoch: 30, Training Loss: 4.783698290586472
+---------- Test Loss: 1.1893859207630157
+---------- Test Precision: 0.2911
+---------- Test Recall: 0.3211
+---------- Test F1 Score: 0.3015
+ 
+ 
+Epoch: 31, Training Loss: 4.6317418068647385
+---------- Test Loss: 1.171732634305954
+---------- Test Precision: 0.2961
+---------- Test Recall: 0.3252
+---------- Test F1 Score: 0.3061
+ 
+ 
+Epoch: 32, Training Loss: 4.645255073904991
+---------- Test Loss: 1.203607439994812
+---------- Test Precision: 0.3006
+---------- Test Recall: 0.3299
+---------- Test F1 Score: 0.3107
+ 
+ 
+Epoch: 33, Training Loss: 4.57987168431282
+---------- Test Loss: 1.2161673158407211
+---------- Test Precision: 0.3036
+---------- Test Recall: 0.3346
+---------- Test F1 Score: 0.3144
+ 
+ 
+Epoch: 34, Training Loss: 4.788012817502022
+---------- Test Loss: 1.274006575345993
+---------- Test Precision: 0.2879
+---------- Test Recall: 0.3146
+---------- Test F1 Score: 0.2968
+ 
+ 
+Epoch: 35, Training Loss: 4.765526562929153
+---------- Test Loss: 1.2086108922958374
+---------- Test Precision: 0.2879
+---------- Test Recall: 0.3146
+---------- Test F1 Score: 0.2968
+ 
+ 
+Epoch: 36, Training Loss: 4.522219210863113
+---------- Test Loss: 1.1122650355100632
+---------- Test Precision: 0.2852
+---------- Test Recall: 0.3144
+---------- Test F1 Score: 0.2952
+ 
+ 
+Epoch: 37, Training Loss: 4.390239834785461
+---------- Test Loss: 1.2130777537822723
+---------- Test Precision: 0.2942
+---------- Test Recall: 0.3221
+---------- Test F1 Score: 0.3036
+ 
+ 
+Epoch: 38, Training Loss: 4.983982369303703
+---------- Test Loss: 1.1335423737764359
+---------- Test Precision: 0.2942
+---------- Test Recall: 0.3221
+---------- Test F1 Score: 0.3036
+ 
+ 
+Epoch: 39, Training Loss: 4.345972001552582
+---------- Test Loss: 1.0417863130569458
+---------- Test Precision: 0.3006
+---------- Test Recall: 0.3299
+---------- Test F1 Score: 0.3107
+ 
+ 
+Epoch: 40, Training Loss: 4.198451846837997
+---------- Test Loss: 1.004937618970871
+---------- Test Precision: 0.3036
+---------- Test Recall: 0.3346
+---------- Test F1 Score: 0.3144
+ 
+ 
+Epoch: 41, Training Loss: 4.063722297549248
+---------- Test Loss: 0.9977052956819534
+---------- Test Precision: 0.3006
+---------- Test Recall: 0.3299
+---------- Test F1 Score: 0.3107
+ 
+ 
+Epoch: 42, Training Loss: 3.932881772518158
+---------- Test Loss: 0.9576392024755478
+---------- Test Precision: 0.3006
+---------- Test Recall: 0.3299
+---------- Test F1 Score: 0.3107
+ 
+ 
+Epoch: 43, Training Loss: 3.84405317902565
+---------- Test Loss: 1.0161270946264267
+---------- Test Precision: 0.3006
+---------- Test Recall: 0.3299
+---------- Test F1 Score: 0.3107
+ 
+ 
+Epoch: 44, Training Loss: 3.8405010998249054
+---------- Test Loss: 0.9386396706104279
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 45, Training Loss: 3.6344732493162155
+---------- Test Loss: 0.8930353820323944
+---------- Test Precision: 0.3119
+---------- Test Recall: 0.3417
+---------- Test F1 Score: 0.3222
+ 
+ 
+Epoch: 46, Training Loss: 3.7076493948698044
+---------- Test Loss: 0.9451184868812561
+---------- Test Precision: 0.3063
+---------- Test Recall: 0.337
+---------- Test F1 Score: 0.317
+ 
+ 
+Epoch: 47, Training Loss: 3.759730741381645
+---------- Test Loss: 0.8965099900960922
+---------- Test Precision: 0.3103
+---------- Test Recall: 0.3368
+---------- Test F1 Score: 0.3188
+ 
+ 
+Epoch: 48, Training Loss: 3.8104944825172424
+---------- Test Loss: 0.9848095327615738
+---------- Test Precision: 0.288
+---------- Test Recall: 0.3153
+---------- Test F1 Score: 0.2972
+ 
+ 
+Epoch: 49, Training Loss: 3.9809093177318573
+---------- Test Loss: 1.040002852678299
+---------- Test Precision: 0.3158
+---------- Test Recall: 0.3414
+---------- Test F1 Score: 0.3241
+ 
+ 
+Checkpoint saved
+Epoch: 50, Training Loss: 4.066901281476021
+---------- Test Loss: 0.957087829709053
+---------- Test Precision: 0.3041
+---------- Test Recall: 0.3318
+---------- Test F1 Score: 0.3134
+ 
+ 
+Epoch: 51, Training Loss: 3.6923640072345734
+---------- Test Loss: 0.8489611446857452
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 52, Training Loss: 3.468304142355919
+---------- Test Loss: 0.9069556891918182
+---------- Test Precision: 0.3063
+---------- Test Recall: 0.337
+---------- Test F1 Score: 0.317
+ 
+ 
+Epoch: 53, Training Loss: 3.5545537173748016
+---------- Test Loss: 0.8422284573316574
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 54, Training Loss: 3.3446915596723557
+---------- Test Loss: 0.8030728399753571
+---------- Test Precision: 0.3063
+---------- Test Recall: 0.337
+---------- Test F1 Score: 0.317
+ 
+ 
+Epoch: 55, Training Loss: 3.1954099535942078
+---------- Test Loss: 0.7719809263944626
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 56, Training Loss: 3.1714471355080605
+---------- Test Loss: 0.7811141312122345
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 57, Training Loss: 3.0872529596090317
+---------- Test Loss: 0.7459020167589188
+---------- Test Precision: 0.3158
+---------- Test Recall: 0.3414
+---------- Test F1 Score: 0.3241
+ 
+ 
+Epoch: 58, Training Loss: 3.109893277287483
+---------- Test Loss: 0.7639558985829353
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 59, Training Loss: 3.151393160223961
+---------- Test Loss: 0.7334419637918472
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 60, Training Loss: 3.0409638062119484
+---------- Test Loss: 0.7293397784233093
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 61, Training Loss: 3.025097571313381
+---------- Test Loss: 0.7670549675822258
+---------- Test Precision: 0.3216
+---------- Test Recall: 0.3485
+---------- Test F1 Score: 0.3303
+ 
+ 
+Epoch: 62, Training Loss: 3.13230998814106
+---------- Test Loss: 0.7394996583461761
+---------- Test Precision: 0.3216
+---------- Test Recall: 0.3485
+---------- Test F1 Score: 0.3303
+ 
+ 
+Epoch: 63, Training Loss: 2.9721201434731483
+---------- Test Loss: 0.705901563167572
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 64, Training Loss: 3.047151543200016
+---------- Test Loss: 0.8957514464855194
+---------- Test Precision: 0.2978
+---------- Test Recall: 0.3251
+---------- Test F1 Score: 0.307
+ 
+ 
+Epoch: 65, Training Loss: 3.3420743718743324
+---------- Test Loss: 0.87767743319273
+---------- Test Precision: 0.3041
+---------- Test Recall: 0.3318
+---------- Test F1 Score: 0.3134
+ 
+ 
+Epoch: 66, Training Loss: 3.1177529022097588
+---------- Test Loss: 0.7096837311983109
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 67, Training Loss: 3.0416065379977226
+---------- Test Loss: 0.8139133751392365
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 68, Training Loss: 3.451032727956772
+---------- Test Loss: 0.8480468243360519
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 69, Training Loss: 3.1645340099930763
+---------- Test Loss: 0.6962332129478455
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 70, Training Loss: 3.5614509284496307
+---------- Test Loss: 0.8910175859928131
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 71, Training Loss: 3.4751796200871468
+---------- Test Loss: 0.8974701464176178
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 72, Training Loss: 3.137703374028206
+---------- Test Loss: 0.6973022297024727
+---------- Test Precision: 0.3103
+---------- Test Recall: 0.3368
+---------- Test F1 Score: 0.3188
+ 
+ 
+Epoch: 73, Training Loss: 3.0113584101200104
+---------- Test Loss: 0.7470186874270439
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 74, Training Loss: 3.114135220646858
+---------- Test Loss: 0.671135388314724
+---------- Test Precision: 0.3004
+---------- Test Recall: 0.3303
+---------- Test F1 Score: 0.3106
+ 
+ 
+Epoch: 75, Training Loss: 2.932347685098648
+---------- Test Loss: 0.6823899745941162
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 76, Training Loss: 2.8145885095000267
+---------- Test Loss: 0.7493045255541801
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 77, Training Loss: 2.8443849459290504
+---------- Test Loss: 0.6488127261400223
+---------- Test Precision: 0.3045
+---------- Test Recall: 0.3296
+---------- Test F1 Score: 0.3126
+ 
+ 
+Epoch: 78, Training Loss: 2.6588669642806053
+---------- Test Loss: 0.6312566846609116
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 79, Training Loss: 2.578515723347664
+---------- Test Loss: 0.610978752374649
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 80, Training Loss: 2.520513452589512
+---------- Test Loss: 0.6085732653737068
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 81, Training Loss: 2.5000452920794487
+---------- Test Loss: 0.5995154678821564
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 82, Training Loss: 2.47671078145504
+---------- Test Loss: 0.5894530266523361
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 83, Training Loss: 2.461812525987625
+---------- Test Loss: 0.5867686495184898
+---------- Test Precision: 0.3216
+---------- Test Recall: 0.3485
+---------- Test F1 Score: 0.3303
+ 
+ 
+Epoch: 84, Training Loss: 2.443695083260536
+---------- Test Loss: 0.5811643376946449
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 85, Training Loss: 2.4242606684565544
+---------- Test Loss: 0.5773042738437653
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 86, Training Loss: 2.4128753915429115
+---------- Test Loss: 0.5701795145869255
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 87, Training Loss: 2.3846260234713554
+---------- Test Loss: 0.5662739127874374
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 88, Training Loss: 2.3738823980093002
+---------- Test Loss: 0.5633272528648376
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 89, Training Loss: 2.3923337161540985
+---------- Test Loss: 0.5581766217947006
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 90, Training Loss: 2.35480610281229
+---------- Test Loss: 0.5607748478651047
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 91, Training Loss: 2.4079060778021812
+---------- Test Loss: 0.5732814148068428
+---------- Test Precision: 0.3158
+---------- Test Recall: 0.3414
+---------- Test F1 Score: 0.3241
+ 
+ 
+Epoch: 92, Training Loss: 2.4538374319672585
+---------- Test Loss: 0.5674488246440887
+---------- Test Precision: 0.3158
+---------- Test Recall: 0.3414
+---------- Test F1 Score: 0.3241
+ 
+ 
+Epoch: 93, Training Loss: 2.340351387858391
+---------- Test Loss: 0.5470440536737442
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 94, Training Loss: 2.350496783852577
+---------- Test Loss: 0.5582294911146164
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 95, Training Loss: 2.4338948726654053
+---------- Test Loss: 0.5680362209677696
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 96, Training Loss: 2.3508220314979553
+---------- Test Loss: 0.5353080779314041
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 97, Training Loss: 2.4686249494552612
+---------- Test Loss: 0.6468036621809006
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 98, Training Loss: 2.6907449141144753
+---------- Test Loss: 0.5916412323713303
+---------- Test Precision: 0.3103
+---------- Test Recall: 0.3368
+---------- Test F1 Score: 0.3188
+ 
+ 
+Epoch: 99, Training Loss: 2.473567917943001
+---------- Test Loss: 0.5710750594735146
+---------- Test Precision: 0.3103
+---------- Test Recall: 0.3368
+---------- Test F1 Score: 0.3188
+ 
+ 
+Checkpoint saved
+Epoch: 100, Training Loss: 2.5218703746795654
+---------- Test Loss: 0.6139422878623009
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 101, Training Loss: 2.550757385790348
+---------- Test Loss: 0.554171085357666
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 102, Training Loss: 2.3321593701839447
+---------- Test Loss: 0.531666524708271
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 103, Training Loss: 2.309220902621746
+---------- Test Loss: 0.5351062119007111
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 104, Training Loss: 2.336339510977268
+---------- Test Loss: 0.5190983489155769
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 105, Training Loss: 2.2469425573945045
+---------- Test Loss: 0.506946511566639
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 106, Training Loss: 2.2169331163167953
+---------- Test Loss: 0.5180008187890053
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 107, Training Loss: 2.251058265566826
+---------- Test Loss: 0.5043254494667053
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 108, Training Loss: 2.122934505343437
+---------- Test Loss: 0.4976445809006691
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 109, Training Loss: 2.118666522204876
+---------- Test Loss: 0.5112879350781441
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 110, Training Loss: 2.173160083591938
+---------- Test Loss: 0.5005108341574669
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 111, Training Loss: 2.1345361322164536
+---------- Test Loss: 0.4933736100792885
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 112, Training Loss: 2.1080079302191734
+---------- Test Loss: 0.5035053491592407
+---------- Test Precision: 0.321
+---------- Test Recall: 0.3479
+---------- Test F1 Score: 0.3297
+ 
+ 
+Epoch: 113, Training Loss: 2.162124790251255
+---------- Test Loss: 0.501348577439785
+---------- Test Precision: 0.3158
+---------- Test Recall: 0.3414
+---------- Test F1 Score: 0.3241
+ 
+ 
+Epoch: 114, Training Loss: 2.09605123847723
+---------- Test Loss: 0.47439097613096237
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 115, Training Loss: 2.1363225132226944
+---------- Test Loss: 0.5495071560144424
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 116, Training Loss: 2.174121208488941
+---------- Test Loss: 0.5099657252430916
+---------- Test Precision: 0.3158
+---------- Test Recall: 0.3414
+---------- Test F1 Score: 0.3241
+ 
+ 
+Epoch: 117, Training Loss: 2.096214972436428
+---------- Test Loss: 0.4741073101758957
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 118, Training Loss: 2.0656255409121513
+---------- Test Loss: 0.5184088721871376
+---------- Test Precision: 0.3216
+---------- Test Recall: 0.3485
+---------- Test F1 Score: 0.3303
+ 
+ 
+Epoch: 119, Training Loss: 2.1486891135573387
+---------- Test Loss: 0.47955169528722763
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 120, Training Loss: 2.093332603573799
+---------- Test Loss: 0.4598125219345093
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 121, Training Loss: 2.0658872723579407
+---------- Test Loss: 0.5060769990086555
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 122, Training Loss: 2.2014414593577385
+---------- Test Loss: 0.46214965730905533
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 123, Training Loss: 1.9869292750954628
+---------- Test Loss: 0.4709259197115898
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 124, Training Loss: 1.965902827680111
+---------- Test Loss: 0.45289018005132675
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 125, Training Loss: 1.9931542798876762
+---------- Test Loss: 0.4484943076968193
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 126, Training Loss: 1.9378445371985435
+---------- Test Loss: 0.466201551258564
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 127, Training Loss: 1.9561582952737808
+---------- Test Loss: 0.4849051833152771
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 128, Training Loss: 2.071455031633377
+---------- Test Loss: 0.45226895809173584
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 129, Training Loss: 1.9255573600530624
+---------- Test Loss: 0.4732642024755478
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 130, Training Loss: 1.9381169825792313
+---------- Test Loss: 0.5160217955708504
+---------- Test Precision: 0.2946
+---------- Test Recall: 0.3232
+---------- Test F1 Score: 0.3044
+ 
+ 
+Epoch: 131, Training Loss: 2.0763032287359238
+---------- Test Loss: 0.44575517624616623
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 132, Training Loss: 1.9268699139356613
+---------- Test Loss: 0.4315411448478699
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 133, Training Loss: 1.8658685460686684
+---------- Test Loss: 0.43245774507522583
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 134, Training Loss: 1.8561108112335205
+---------- Test Loss: 0.4234616532921791
+---------- Test Precision: 0.3116
+---------- Test Recall: 0.3421
+---------- Test F1 Score: 0.3221
+ 
+ 
+Epoch: 135, Training Loss: 1.8182949274778366
+---------- Test Loss: 0.41802190244197845
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 136, Training Loss: 1.8023577705025673
+---------- Test Loss: 0.41665806621313095
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 137, Training Loss: 1.8013233542442322
+---------- Test Loss: 0.4133063107728958
+---------- Test Precision: 0.3059
+---------- Test Recall: 0.3349
+---------- Test F1 Score: 0.3159
+ 
+ 
+Epoch: 138, Training Loss: 1.7810031697154045
+---------- Test Loss: 0.4108884558081627
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 139, Training Loss: 1.7679883912205696
+---------- Test Loss: 0.40688633918762207
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 140, Training Loss: 1.7502506896853447
+---------- Test Loss: 0.40393735468387604
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 141, Training Loss: 1.7332272082567215
+---------- Test Loss: 0.4012020006775856
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 142, Training Loss: 1.721141703426838
+---------- Test Loss: 0.3978542611002922
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 143, Training Loss: 1.7177349254488945
+---------- Test Loss: 0.39636971801519394
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 144, Training Loss: 1.702075220644474
+---------- Test Loss: 0.39491039514541626
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 145, Training Loss: 1.7041372880339622
+---------- Test Loss: 0.392733596265316
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 146, Training Loss: 1.6977453753352165
+---------- Test Loss: 0.39013758301734924
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 147, Training Loss: 1.6822934970259666
+---------- Test Loss: 0.3901451304554939
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 148, Training Loss: 1.689219444990158
+---------- Test Loss: 0.39070550352334976
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Epoch: 149, Training Loss: 1.7148576751351357
+---------- Test Loss: 0.38787759095430374
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 
+Checkpoint saved
+Epoch: 150, Training Loss: 1.6791192218661308
+---------- Test Loss: 0.38401903212070465
+---------- Test Precision: 0.311
+---------- Test Recall: 0.3415
+---------- Test F1 Score: 0.3215
+ 
+ 

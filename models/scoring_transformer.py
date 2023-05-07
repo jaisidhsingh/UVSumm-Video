@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from configs.model_configs import cfg
 from .positional_encoding import *
 
 
@@ -43,70 +42,18 @@ class ScoringTransformer(nn.Module):
 		x = self.positional_encoding(x)
 		hidden = torch.zeros_like(x).to(x.device)
 
+		encoder_outputs = []
 		for i in range(self.num_blocks):
 			hidden = self.encoder_blocks[i](x + hidden)
-		
-		for i in range(self.num_blocks):
-			hidden = self.decoder_blocks[i](x, hidden)
-		
-		scores = self.fc_out(hidden)
-		return self.activation(scores).squeeze(2)
+			encoder_outputs.append(hidden)
 
-
-"""
-class ScoringTransformer(nn.Module):
-	def __init__(self, cfg):
-		super().__init__()
-		self.cfg = cfg
-		self.embedding_dim = cfg.embedding_dim
-
-		if self.cfg.encoding_type == 'cosine':
-			self.positional_encoding = CosinePositionalEncoding(cfg.embedding_dim, cfg.seq_len)
-		else:
-			self.positional_encoding = LearnablePositionalEncoding(cfg.embedding_dim, cfg.seq_len)
-
-		self.encoder_blocks1 = []
-		self.encoder_blocks2 = []
-
-		for i in range(cfg.num_blocks // 2):
-			block = nn.TransformerEncoderLayer(
-				d_model=cfg.embedding_dim,
-				nhead=cfg.num_heads,
-				batch_first=True
-			)			
-			self.encoder_blocks1.append(block)
-		self.encoder_blocks1 = nn.Sequential(*self.encoder_blocks1)
-
-		for i in range(cfg.num_blocks // 2):
-			block = nn.TransformerEncoderLayer(
-				d_model=cfg.embedding_dim,
-				nhead=cfg.num_heads,
-				batch_first=True
-			)			
-			self.encoder_blocks2.append(block)
-		self.encoder_blocks2 = nn.Sequential(*self.encoder_blocks2)		
-		self.activation = nn.Sigmoid()
-		self.fc_out = nn.Linear(cfg.embedding_dim, 1)
-
-	def forward(self, x):
-		x = self.positional_encoding(x)
-
-		encoder_outputs = []
-		for i in range(self.cfg.num_blocks // 2):
-			x = self.encoder_blocks1[i](x)
-
-			if i != (self.cfg.num_blocks // 2) - 1:
-				encoder_outputs.append(x)
-				
 		encoder_outputs.reverse()
+		decoder_hidden = torch.zeros_like(hidden).to(x.device)
 
-		for i in range(self.cfg.num_blocks // 2):
-			if i == 0:
-				x = self.encoder_blocks2[i](x)
-			else:
-				x += encoder_outputs[i-1]
-				x = self.encoder_blocks2[i](x)
-		
-		scores = self.fc_out(x)
-		return self.activation(scores).squeeze(2)
-"""
+		for i in range(self.num_blocks):
+			decoderhidden = hidden + encoder_outputs[i]
+			hidden = self.decoder_blocks[i](x, hidden)
+
+		features = hidden	
+		scores = self.fc_out(hidden)
+		return self.activation(scores).squeeze(2), features
